@@ -17,6 +17,7 @@ function changefunc(){
         var audio = new Audio('ding.mp3');
         audio.play();
         document.getElementById("textInMid").innerHTML = Object.keys(solutions)[Math.round(Math.random() * (Object.keys(solutions).length)-1)]
+        document.getElementById("textInput").value = "";
     }
 
 }
