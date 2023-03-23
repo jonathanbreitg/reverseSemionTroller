@@ -27,10 +27,10 @@ app.get('/ding.mp3', (req, res) => {
     res.sendFile(path.join(__dirname, '/ding.mp3'));
 })
 
-app.post('/pull',(req,res)=>{
+app.all('/pull',(req,res)=>{
     console.log("asked to do a pull.. pulling")
     exec("git pull");
-    
+
 
 })
 
