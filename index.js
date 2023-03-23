@@ -1,4 +1,5 @@
 const express = require('express')
+const { exec } = require("child_process");
 const path = require('path');
 const app = express()
 const port = 3000
@@ -25,6 +26,14 @@ app.get('/AmaticaSC-Bold.ttf', (req, res) => {
 app.get('/ding.mp3', (req, res) => {
     res.sendFile(path.join(__dirname, '/ding.mp3'));
 })
+
+app.post('/pull',(req,res)=>{
+    console.log("asked to do a pull.. pulling")
+    exec("git pull");
+    
+
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
