@@ -26,6 +26,13 @@ app.get('/AmaticaSC-Bold.ttf', (req, res) => {
 app.get('/ding.mp3', (req, res) => {
     res.sendFile(path.join(__dirname, '/ding.mp3'));
 })
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, '/favicon.ico'));
+})
+
+app.get('/favicon.png', (req, res) => {
+    res.sendFile(path.join(__dirname, '/favicon.png'));
+})
 
 app.all('/pull',(req,res)=>{
     console.log("asked to do a pull.. pulling")
